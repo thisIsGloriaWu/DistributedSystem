@@ -7,7 +7,9 @@ public class DataGenerator {
     private static final DataGenerator INSTANCE = new DataGenerator();
 
     private final int MIN = 1;
-    private final int SEASON = 2022;
+    private final String SEASON = "2022";
+
+    private final String DAY = "1";
     private final int SKIER_MAX = 100000;
     private final int RESORT_MAX = 10;
     private final int LIFT_MAX = 40;
@@ -32,12 +34,12 @@ public class DataGenerator {
         return ThreadLocalRandom.current().nextInt(MIN, LIFT_MAX+1);
     }
 
-    public int getRandomSeasonId() {
+    public String getRandomSeasonId() {
         return SEASON;
     }
 
-    public int getRandomDayId() {
-        return MIN;
+    public String getRandomDayId() {
+        return DAY;
     }
 
     public int getRandomTime() {
