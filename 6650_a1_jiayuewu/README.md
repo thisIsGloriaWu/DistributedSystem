@@ -59,7 +59,7 @@ Class `LatencySaver`:
 
 ### Comparison
 According to the Little's Law, the actual and theoretical results of a single thread's sending 10K requests is similar.
-![Part 3 Little's Law test results](https://github.com/thisIsGloriaWu/DistributedSystem/blob/main/6650_a1_jiayuewu/src/main/java/client/test.png)
+![Part 3 Little's Law test results](https://github.com/thisIsGloriaWu/DistributedSystem/blob/main/6650_a1_jiayuewu/src/main/java/client/test.PNG)
 
 
 ### Summary:
