@@ -17,7 +17,7 @@ public class MultiThreadClient {
     private final static int TIMES = 100;
     private static final AtomicBoolean isCompleted = new AtomicBoolean(false);
     private static final AtomicInteger totalSent = new AtomicInteger(0);
-    private final static String BASE_PATH = "http://34.214.3.202:8080/swagger-spring";
+    private final static String BASE_PATH = "http://35.92.12.31:8080/swagger-spring";
     private static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(THREAD_NUM);
 
     public static void main(String[] args) {
