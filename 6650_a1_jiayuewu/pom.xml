@@ -199,6 +199,11 @@
       <artifactId>threetenbp</artifactId>
       <version>${threetenbp-version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>4.1</version>
+    </dependency>
     <!-- test dependencies -->
     <dependency>
       <groupId>junit</groupId>

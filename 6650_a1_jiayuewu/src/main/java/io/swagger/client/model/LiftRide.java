@@ -25,7 +25,6 @@ import java.io.IOException;
  * LiftRide
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-10-04T01:15:01.041Z[GMT]")
 public class LiftRide {
   @SerializedName("time")
   private Integer time = null;
