@@ -32,7 +32,7 @@ Class `MultiThreadClient`:
 - `main()` method
   - start producer and consumers, sends requests to the AWS server and prints out results.
   - Consumers(multiple threads) are implemented by `ThreadPoolExecutor`.
-  - When any of the 32 threads finishes its tasks, the executor extends its pool size to 64 threads and let each thread send 100 requests.
+  - When any of the 32 threads finishes its tasks, the executor extends its pool size to 256 threads and let each thread send 100 requests.
   - set `Producer` with **MAX_PRIORITY** since it serves on a single dedicated thread. Otherwise, consumers may wait too long for taking an event, which decreases the throughput.
 
 - `sendRequest()` as a helper method to send requests, get responses and handle errors.
@@ -55,6 +55,11 @@ Class `LatencySaver`:
 - `receive()` method: convert requests' information into `String[]` and push it into the queue/list.
 
 - set with MIN_PRIORITY in `MultiThreadClient2`. Since writing into CSV file is **a "promised" task**, lower the priority of writing could avoid throughput decrease when multiple threads wait to write responses.
+
+
+### Comparison
+According to the Little's Law, the actual and theoretical results of a single thread's sending 10K requests is similar.
+![Part 3 Little's Law test results](https://github.com/thisIsGloriaWu/DistributedSystem/blob/main/6650_a1_jiayuewu/src/main/java/client/test.png)
 
 
 ### Summary:
