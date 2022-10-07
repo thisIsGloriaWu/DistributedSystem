@@ -1,5 +1,5 @@
-# CS6650	Building Scalable Distributed Systems
-## Assignment 1    Client Design
+# Building Scalable Distributed Systems
+## Client Design
 
 [GitHub Repo](https://github.com/thisIsGloriaWu/DistributedSystem)
 
