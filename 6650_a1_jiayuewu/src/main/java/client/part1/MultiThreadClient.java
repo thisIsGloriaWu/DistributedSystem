@@ -13,11 +13,11 @@ public class MultiThreadClient {
     private final static int THREAD_NUM = 32;
     private final static int SIZE = 200000;
     private final static int RETRY = 5;
-    private final static int RESET_THREAD_NUM = 64;
+    private final static int RESET_THREAD_NUM = 256;
     private final static int TIMES = 100;
     private static final AtomicBoolean isCompleted = new AtomicBoolean(false);
     private static final AtomicInteger totalSent = new AtomicInteger(0);
-    private final static String BASE_PATH = "http://35.92.12.31:8080/swagger-spring";
+    private final static String BASE_PATH = "http://34.220.218.12:8080/swagger-spring";
     private static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(THREAD_NUM);
 
     public static void main(String[] args) {
@@ -110,7 +110,7 @@ public class MultiThreadClient {
         System.out.println("Time elapsed in milliseconds: " + (end - start));
         double throughput = totalSent.get()*1000.0/(end - start);
         System.out.println("Throughput: " + String.format("%.2f", throughput));
-
+        System.out.println("Threads used: " + RESET_THREAD_NUM);
     }
 
     private int sendRequest(SkiersApi apiInstance, Event event) {
