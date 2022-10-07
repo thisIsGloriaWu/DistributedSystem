@@ -7,7 +7,7 @@
 
 In part 1, I implemented `MultiThreadClient` with three major classes: `Event`, `DataGenerator` and `Producer`.
 
-![Part1 Major Classes](/src/main/java/client/part1/part1.png)
+![Part1 Major Classes](https://github.com/thisIsGloriaWu/DistributedSystem/blob/main/6650_a1_jiayuewu/src/main/java/client/part1/part1.png)
 
 In `MultiThreadClient`, the process of generating and sending requests follows the **“Producer/Consumer” model**. The producer is in charge of generating events and serving these events to a queue, where multiple threads, that are also consumers, take events from.
 
@@ -41,7 +41,7 @@ Class `MultiThreadClient`:
 ### Part 2:
 The majority content of `MultiThreadClient2` is the same as Part 1. The different thing is that I have implemented another `LatencySaver` class to record response time and write into CSV files.
 
-![Part 2 MultiThreadClient2 and LatencySaver](/src/main/java/client/part2/part2.png)
+![Part 2 MultiThreadClient2 and LatencySaver](https://github.com/thisIsGloriaWu/DistributedSystem/blob/main/6650_a1_jiayuewu/src/main/java/client/part2/part2.png)
 
 It applies to the **"Producer/Consumer" Model** as well. During the process of getting response time and writing into CSV files, threads in `MultiThreadClient2` play the role of producers, and the `LatencySaver` is the single consumer.
 
