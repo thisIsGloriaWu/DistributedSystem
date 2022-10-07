@@ -58,9 +58,12 @@ Class `LatencySaver`:
 
 
 ### Comparison
-According to the Little's Law, the actual and theoretical results of a single thread's sending 10K requests is similar.
+- According to the Little's Law, the actual and theoretical results of a single thread's sending 10K requests is similar.
 ![Part 3 Little's Law test results](https://github.com/thisIsGloriaWu/DistributedSystem/blob/main/6650_a1_jiayuewu/src/main/java/client/test.PNG)
 
+- By default, a **Spring/SpringBoot** server is deployed on the EC2 instance for testing.
+
+- Both client configurations are optimized for **highest throughput**, not **latency**.
 
 ### Summary:
 - implement client with a **"Producer/Consumer" Model**.
@@ -73,5 +76,6 @@ According to the Little's Law, the actual and theoretical results of a single th
 
 - set different **thread priorities** to increase throughput.
 
-- let each thread send 100 requests at a time to make the most of each thread.
+- batch 100 requests at a time to make the most of each thread.
 
+- deploy a **Spring/SpringBoot** server.
