@@ -19,12 +19,10 @@ public class MultiThreadClient2 {
     private final static int TIMES = 100;
     private static final AtomicBoolean isCompleted = new AtomicBoolean(false);
     private static final AtomicInteger totalSent = new AtomicInteger(0);
-    private final static String BASE_PATH = "http://34.220.218.12:8080/swagger-spring";
+    private final static String BASE_PATH = "http://servlet-balancer-462706634.us-west-2.elb.amazonaws.com/swagger-spring";
     private static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(THREAD_NUM);
 
     public static void main(String[] args) {
-        final MultiThreadClient2 client = new MultiThreadClient2();
-
         // Initialize producer
         final Producer producer = new Producer(SIZE);
         Thread produceThread = new Thread(producer);
@@ -49,7 +47,7 @@ public class MultiThreadClient2 {
                         SkiersApi apiInstance = new SkiersApi();
                         apiInstance.getApiClient().setBasePath(BASE_PATH);
                         Event event = producer.serve();
-                        sent += client.sendRequest(apiInstance, event, saver);
+                        sent += sendRequest(apiInstance, event, saver);
                         if (sent >= 100) {
                             totalSent.addAndGet(sent);
                             sent = 0;
@@ -96,7 +94,7 @@ public class MultiThreadClient2 {
                         if (event == null) {
                             continue;
                         }
-                        sent += client.sendRequest(apiInstance, event, saver);
+                        sent += sendRequest(apiInstance, event, saver);
                     }
                     totalSent.addAndGet(sent);
                 }
@@ -122,7 +120,7 @@ public class MultiThreadClient2 {
 
     }
 
-    private int sendRequest(SkiersApi apiInstance, Event event, LatencySaver saver) {
+    private static int sendRequest(SkiersApi apiInstance, Event event, LatencySaver saver) {
         for (int i = 0; i < RETRY; i++) {
             try {
                 long requestStart = System.currentTimeMillis();

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="6650_a1_server" />
+        <module name="swagger-spring" />
+        <module name="6650_a2_server" />
+        <module name="6650_a2_backend" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="6650_a1_server" options="-parameters" />
+      <module name="6650_a2_backend" options="-parameters" />
+      <module name="6650_a2_server" options="-parameters" />
+      <module name="swagger-spring" options="-parameters" />
+    </option>
+  </component>
+</project>
