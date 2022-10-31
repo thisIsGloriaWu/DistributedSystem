@@ -5,7 +5,6 @@ C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\m
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\configuration\LocalDateTimeConverter.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\api\ResortsApi.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\api\ApiException.java
-C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\rabbitmq\RemoteQueue.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\model\APIStatsEndpointStats.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\model\SkierVertical.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\model\LiftRide.java
@@ -28,5 +27,6 @@ C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\m
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\model\SkierVerticalResorts.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\Swagger2SpringBoot.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\model\ResortSkiers.java
+C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\rabbitmq\RemoteQueue.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\api\StatisticsApi.java
 C:\Users\Gloria\Desktop\NEU\Courses\6650\DistributedSystem\6650_a2_backend\src\main\java\io\swagger\model\SeasonsList.java

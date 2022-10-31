@@ -20,6 +20,7 @@ public class MultiThreadClient2 {
     private static final AtomicBoolean isCompleted = new AtomicBoolean(false);
     private static final AtomicInteger totalSent = new AtomicInteger(0);
     private final static String BASE_PATH = "http://servlet-balancer-462706634.us-west-2.elb.amazonaws.com/swagger-spring";
+//    private final static String BASE_PATH = "http://54.186.36.17:8080/swagger-spring";
     private static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(THREAD_NUM);
 
     public static void main(String[] args) {
