@@ -1,21 +1,21 @@
 # Building Scalable Distributed System - Adding Persistence
 
 ## Database Design
-In class `ConsumerMain` in package `consumer`, instead of recording users' data by hashmap, the consumer will write data into **Redis** databases.
+In class `ConsumerMain` in package `consumer`, instead of recording users' data by hashmap, the consumer will write data into **Redis** database.
 
 - utilizes `lettuce` among Redis Java clients to guarantee **thread safety**.
-- uses `redis hashes` to write users' data into databases. In this case, `skierId` is the key and `resortId` and `liftId` are its values.
+- uses `redis hashes` to write users' data into database. In this case, `skierId` is the key and `resortId` and `liftId` are its values.
 - provides extensibility: just add more field-value pairs if is required to store more information.
 
 
 ## Deployment Topologies
 ![deployment](https://github.com/thisIsGloriaWu/DistributedSystem/blob/main/6650_a3/test%20results/deployment.PNG)
 
-- Client on local machine: the client that sends 20k requests to servlets.
+- Client on local machine: the client that sends 200k requests to servlets.
 - `6650_servlet_0` on AWS Linux EC2 instance: the servlet to receive POST requests from client. **Only deploys one servlet due to budget**.
 - `RMQ` on Ubuntu instance: the remote queue using `RabbitMQ` to store messages. Messages are posted from servlets and consumed by consumers.
-- `consumer` on AWS Linux EC2 instance: consumers that consume messages and write data into Redis databases.
-- `Redis` on AWS Linux EC2 instance: Redis databases that get data from consumers.
+- `consumer` on AWS Linux EC2 instance: consumers that consume messages and write data into Redis database.
+- `Redis` on AWS Linux EC2 instance: Redis database that gets data from consumers.
 
 
 ## Results
@@ -86,14 +86,14 @@ MongoDB trades availability off for higher consistency.
 
 References:
 
-[redis-vs-mongodb][https://hevodata.com/learn/redis-vs-mongodb/]
+[redis-vs-mongodb](https://hevodata.com/learn/redis-vs-mongodb/)
 
-[mongodb-vs-redis][https://www.integrate.io/blog/mongodb-vs-redis/]
+[mongodb-vs-redis](https://www.integrate.io/blog/mongodb-vs-redis/)
 
-[mongodb-vs-redis][https://www.mongodb.com/compare/mongodb-vs-redis]
+[mongodb-vs-redis](https://www.mongodb.com/compare/mongodb-vs-redis)
 
-[redis-availability][https://stackoverflow.com/questions/59511275/redis-availability-and-cap-theorem]
+[redis-availability](https://stackoverflow.com/questions/59511275/redis-availability-and-cap-theorem)
 
-[mongodb-pros-and-cons][https://www.thinkautomation.com/our-two-cents/understanding-the-key-mongodb-pros-and-cons/]
+[mongodb-pros-and-cons](https://www.thinkautomation.com/our-two-cents/understanding-the-key-mongodb-pros-and-cons/)
 
 
