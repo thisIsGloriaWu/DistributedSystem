@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
 
 public class RemoteQueue implements AutoCloseable {
     private static final Logger LOGGER = LoggerFactory.getLogger(RemoteQueue.class);
-    private static final String HOST = "34.219.94.165";
+    private static final String HOST = "18.237.166.132";
     private static final String QUEUE_NAME = "a2_messages";
 
     private Connection connection = null;

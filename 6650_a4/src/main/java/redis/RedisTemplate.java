@@ -9,10 +9,11 @@ import io.swagger.model.SkierVerticalResorts;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Logger;
 
 
 public class RedisTemplate {
-    private static final String REDIS_IP = "34.223.208.179";
+    private static final String REDIS_IP = "52.27.122.82";
 
     private final RedisConnection<String, String> connection;
 
